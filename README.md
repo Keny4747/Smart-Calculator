@@ -1,3 +1,3 @@
 # Smart-Calculator
 Project for the JetBrains Academy platform.\
->Regular expression
+>use of Regular expression
