@@ -1,2 +1,3 @@
 # Smart-Calculator
-Project for the JetBrains Academy platform.
+Project for the JetBrains Academy platform.\
+>Regular expression
