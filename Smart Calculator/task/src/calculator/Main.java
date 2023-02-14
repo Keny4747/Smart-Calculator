@@ -1,7 +1,6 @@
 package calculator;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -40,6 +39,9 @@ public class Main {
 
 
     }
+    public void addVariable(){
+        
+    }
 
     public static int eval(String expr) {
         String regExSum = "[+]+|[-]{2}|-{4}";
@@ -60,14 +62,9 @@ public class Main {
             String op = tokens[i];
             int value = Integer.parseInt(tokens[i + 1]);
             switch (op) {
-                case "+":
-                    result += value;
-                    break;
-                case "-":
-                    result -= value;
-                    break;
-                default:
-                    throw new IllegalArgumentException("Invalid expression");
+                case "+" -> result += value;
+                case "-" -> result -= value;
+                default -> throw new IllegalArgumentException("Invalid expression");
             }
         }
         return result;
