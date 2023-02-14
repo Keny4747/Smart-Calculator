@@ -1,11 +1,10 @@
 package calculator;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        Map<String,Integer> listaVariables = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.print("");
@@ -39,8 +38,8 @@ public class Main {
 
 
     }
-    public void addVariable(){
-        
+    public void addVariable(String inputUser){
+        String [] varValu = inputUser.trim().split(" ");
     }
 
     public static int eval(String expr) {
