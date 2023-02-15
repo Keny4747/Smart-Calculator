@@ -3,6 +3,7 @@ package calculator;
 import java.util.*;
 
 public class Main {
+    static final String REGEX="[a-zA-Z]";
     public static void main(String[] args) {
         Map<String,Integer> listVariables = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
@@ -33,10 +34,11 @@ public class Main {
                 if(result.length>1){
                     listVariables.put(result[0],Integer.parseInt(result[1]));
                 }
-                
               continue;
             }
-
+            if(REGEX.matches(input)){
+                System.out.println(listVariables.get(input));
+            }
             try {
                 int result = eval(input);
                 System.out.println(result);
