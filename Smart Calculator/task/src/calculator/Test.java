@@ -43,7 +43,7 @@ public class Test {
         StringBuilder text = new StringBuilder();
         for (String s : inputUser) {
             char c = s.charAt(0);
-            if (c == '=') {
+            if (c == '='||c == '+'||c == '-') {
                 result.add(String.valueOf(text));
                 text = new StringBuilder();
                 result.add(String.valueOf(c));
@@ -56,6 +56,14 @@ public class Test {
         return result;
     }
     public static void obtainValue(String input,Map<String, Integer> listVariables){
-        String
+        String [] arrayInput=input.split("");
+        List<String> list = addIdentifierValue(arrayInput);
+        String result="";
+        for(int i = 0; i<list.size(); i++){
+            if(listVariables.containsKey(list.get(i))){
+                int value= listVariables.get(list.get(i));
+
+            }
+        }
     }
 }
