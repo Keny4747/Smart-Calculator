@@ -39,7 +39,7 @@ public class Main {
 
     }
     public void addVariable(String inputUser){
-        String [] varValu = inputUser.trim().split(" ");
+        String [] varValu = inputUser.trim().split("");
     }
 
     public static int eval(String expr) {
