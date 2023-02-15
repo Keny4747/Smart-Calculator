@@ -29,10 +29,14 @@ public class Main {
                 }
             }
             if(input.contains("=")){
-              String [] result = Objects.requireNonNull(Test.addVariable(input)).split(" ");
-              listVariables.put(result[0],Integer.parseInt(result[1]));
+              String [] result = Test.addVariable(input).split(" ");
+                if(result.length>1){
+                    listVariables.put(result[0],Integer.parseInt(result[1]));
+                }
+                
               continue;
             }
+
             try {
                 int result = eval(input);
                 System.out.println(result);

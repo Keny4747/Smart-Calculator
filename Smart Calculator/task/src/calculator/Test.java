@@ -37,7 +37,7 @@ public class Test {
 
             return lista.get(0)+" "+lista.get(2);
         }
-        return null;
+        return "";
     }
 
     public static List<String> addIdentifierValue(String[] inputUser) {
