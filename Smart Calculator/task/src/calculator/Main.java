@@ -38,6 +38,9 @@ public class Main {
             }
             if(listVariables.containsKey(input.trim())){
                 System.out.println(listVariables.get(input));
+                continue;
+            }else {
+                System.out.println("Unknown variable");
             }
             try {
                 int result = eval(input);
