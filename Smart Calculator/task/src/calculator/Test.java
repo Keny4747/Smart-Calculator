@@ -1,18 +1,26 @@
 package calculator;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Test {
-   static  Map<String, Integer> variables = new HashMap<>();
+    /*
     public static void main(String[] args) {
-        String text = "nmn = a2a";
-        addVariable(text);
 
-    }
-    public static void addVariable(String inputUser) {
+        String text = "n = 2";
+        String text2 = "N =3";
+        String text3 = "n =6";
+        addVariable(text);
+        addVariable(text2);
+        addVariable(text3);
+        for(var entry:variables.entrySet()){
+            System.out.println(entry.getKey()+" "+entry.getValue());
+        }
+        }
+*/
+
+    public static void addVariable(String inputUser,Map<String, Integer>listVariables) {
         String[] varValue = inputUser
                 .replaceAll(" ", "")
                 .split("");
@@ -25,9 +33,8 @@ public class Test {
         }else if(!lista.get(2).matches(regValue)){
             System.out.println("Invalid assignment");
         }else {
-            variables.put(lista.get(0),Integer.parseInt(lista.get(2)));
+            listVariables.put(lista.get(0),Integer.parseInt(lista.get(2)));
         }
-
     }
 
     public static List<String> addIdentifierValue(String[] inputUser) {

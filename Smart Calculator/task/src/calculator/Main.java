@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Map<String,Integer> listaVariables = new HashMap<>();
+        Map<String,Integer> listVariables = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.print("");
@@ -27,6 +27,9 @@ public class Main {
                 case "" -> {
                     continue;
                 }
+            }
+            if(input.contains("=")){
+                Test.addVariable(input);
             }
             try {
                 int result = eval(input);
