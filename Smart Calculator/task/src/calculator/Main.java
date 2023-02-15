@@ -36,21 +36,24 @@ public class Main {
                 }
               continue;
             }
+
+            if(input.contains("-")||input.contains("+")){
+                String changedVl=Test.obtainValue(input,listVariables);
+                try {
+                    int result = eval(changedVl);
+                    System.out.println(result);
+                } catch (Exception e) {
+                    System.out.println("Invalid expression");
+                }
+                continue;
+            }
             if(listVariables.containsKey(input.trim())){
                 System.out.println(listVariables.get(input));
-                continue;
+
             }else {
                 System.out.println("Unknown variable");
             }
-            if(input.contains("-")||input.contains("+")){
 
-            }
-            try {
-                int result = eval(input);
-                System.out.println(result);
-            } catch (Exception e) {
-                System.out.println("Invalid expression");
-            }
         }
     }
 

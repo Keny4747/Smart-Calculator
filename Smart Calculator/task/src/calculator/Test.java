@@ -55,15 +55,18 @@ public class Test {
         result.add(String.valueOf(text));
         return result;
     }
-    public static void obtainValue(String input,Map<String, Integer> listVariables){
+    public static String obtainValue(String input,Map<String, Integer> listVariables){
         String [] arrayInput=input.split("");
         List<String> list = addIdentifierValue(arrayInput);
-        String result="";
-        for(int i = 0; i<list.size(); i++){
-            if(listVariables.containsKey(list.get(i))){
-                int value= listVariables.get(list.get(i));
-
+        StringBuilder result= new StringBuilder();
+        for (String s : list) {
+            if (listVariables.containsKey(s)) {
+                result.append(listVariables.get(s));
+            }else{
+                result.append(s);
             }
+
         }
+        return String.valueOf(result);
     }
 }
