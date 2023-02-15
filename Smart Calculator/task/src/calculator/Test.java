@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Test {
+
     /*
     public static void main(String[] args) {
 
@@ -20,7 +21,7 @@ public class Test {
         }
 */
 
-    public static void addVariable(String inputUser,Map<String, Integer>listVariables) {
+    public static String addVariable(String inputUser) {
         String[] varValue = inputUser
                 .replaceAll(" ", "")
                 .split("");
@@ -33,8 +34,10 @@ public class Test {
         }else if(!lista.get(2).matches(regValue)){
             System.out.println("Invalid assignment");
         }else {
-            listVariables.put(lista.get(0),Integer.parseInt(lista.get(2)));
+
+            return lista.get(0)+" "+lista.get(2);
         }
+        return null;
     }
 
     public static List<String> addIdentifierValue(String[] inputUser) {

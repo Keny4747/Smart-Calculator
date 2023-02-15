@@ -29,7 +29,9 @@ public class Main {
                 }
             }
             if(input.contains("=")){
-                Test.addVariable(input);
+              String [] result = Objects.requireNonNull(Test.addVariable(input)).split(" ");
+              listVariables.put(result[0],Integer.parseInt(result[1]));
+              continue;
             }
             try {
                 int result = eval(input);
@@ -38,12 +40,8 @@ public class Main {
                 System.out.println("Invalid expression");
             }
         }
-
-
     }
-    public void addVariable(String inputUser){
-        String [] varValu = inputUser.trim().split("");
-    }
+
 
     public static int eval(String expr) {
         String regExSum = "[+]+|[-]{2}|-{4}";
