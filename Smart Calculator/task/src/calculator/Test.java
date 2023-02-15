@@ -55,4 +55,7 @@ public class Test {
         result.add(String.valueOf(text));
         return result;
     }
+    public static void obtainValue(String input,Map<String, Integer> listVariables){
+        String
+    }
 }

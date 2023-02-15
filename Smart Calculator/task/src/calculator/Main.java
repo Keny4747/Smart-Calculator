@@ -42,6 +42,9 @@ public class Main {
             }else {
                 System.out.println("Unknown variable");
             }
+            if(input.contains("-")||input.contains("+")){
+
+            }
             try {
                 int result = eval(input);
                 System.out.println(result);
