@@ -19,23 +19,37 @@ public class Test {
         }
         }
 */
-    public static String addVariable(String inputUser) {
+    public static String addVariable(String inputUser,Map<String, Integer>listVariables) {
         String[] varValue = inputUser
                 .replaceAll(" ", "")
                 .split("");
         List<String> lista =addIdentifierValue(varValue);
         String regIdentifier = "[a-zA-Z]{" + lista.get(0).length() + "}";
         String regValue = "[0-9]{" + lista.get(2).length() + "}";
-
+        String result="";
         if(!lista.get(0).matches(regIdentifier)){
             System.out.println("Invalid identifier");
         }else if(!lista.get(2).matches(regValue)){
-            System.out.println("Invalid assignment");
+            if(listVariables.containsKey(lista.get(2))){
+                result=lista.get(0)+" "+listVariables.get(lista.get(2));
+            }else {
+                System.out.println("Invalid assignment");
+            }
+
         }else {
 
-            return lista.get(0)+" "+lista.get(2);
+           result=lista.get(0)+" "+lista.get(2);
         }
-        return "";
+        return result;
+    }
+    public static boolean countCharacter(String input){
+        int count = 0;
+        for(int i=0; i<input.length(); i++){
+            if(input.charAt(i)=='='){
+                count++;
+            }
+        }
+        return count>1;
     }
 
     public static List<String> addIdentifierValue(String[] inputUser) {
@@ -56,7 +70,7 @@ public class Test {
         return result;
     }
     public static String obtainValue(String input,Map<String, Integer> listVariables){
-        String [] arrayInput=input.split("");
+        String [] arrayInput=input.replaceAll(" ","").split("");
         List<String> list = addIdentifierValue(arrayInput);
         StringBuilder result= new StringBuilder();
         for (String s : list) {

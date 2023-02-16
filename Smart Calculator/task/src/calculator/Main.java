@@ -30,7 +30,7 @@ public class Main {
                 }
             }
             if(input.contains("=")){
-              String [] result = Test.addVariable(input).split(" ");
+              String [] result = Test.addVariable(input,listVariables).split(" ");
                 if(result.length>1){
                     listVariables.put(result[0],Integer.parseInt(result[1]));
                 }
