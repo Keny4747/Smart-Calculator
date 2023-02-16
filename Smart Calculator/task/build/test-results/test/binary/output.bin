@@ -60,3 +60,11 @@
 > var = 2a
 Invalid assignment
 > c = 7 - 1 = 5
+Invalid assignment
+> variable = f
+Invalid assignment
+> variable = 777
+> Variable
+Unknown variable
+> /exit
+Bye!

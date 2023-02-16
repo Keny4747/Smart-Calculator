@@ -294,24 +294,8 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5321#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #4
-
-    The program could not handle a invalid assignment.
-
-    Please find below the output of your program during this failed test.
-    Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
-
-    ---
-
-    &gt; var1 = 1
-    Invalid identifier
-    &gt; кириллица = 123
-    Invalid identifier
-    &gt; var = 2a
-    Invalid assignment
-    &gt; c = 7 - 1 = 5
-  time: "Wed, 15 Feb 2023 18:04:44 UTC"
+  message: Congratulations!
+  time: "Thu, 16 Feb 2023 14:42:11 UTC"
 record: -1

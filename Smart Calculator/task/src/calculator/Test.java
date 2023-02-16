@@ -36,7 +36,9 @@ public class Test {
                 System.out.println("Invalid assignment");
             }
 
-        }else {
+        }else if(countCharacter(inputUser)){
+            System.out.println("Invalid assignment");
+        }else{
 
            result=lista.get(0)+" "+lista.get(2);
         }
